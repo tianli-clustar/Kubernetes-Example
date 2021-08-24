@@ -1,0 +1,30 @@
+name: tl-test
+namespace: tl-test
+chartName: fate
+chartVersion: v1.5.0
+partyId: 9991
+registry: ""
+pullPolicy: "IfNotPresent"
+persistence: false
+istio:
+  enabled: false
+modules:
+  - rollsite
+
+rollsite:
+  type: NodePort
+  nodePort: 30910
+  partyList:
+    - partyId: 11000
+      partyIp: 10.233.64.1
+      partyPort: 30111
+    - partyId: 12000
+      partyIp: 10.233.64.1
+      partyPort: 30121
+  lifecycle:
+    postStart:
+      exec:
+        command:
+          - sh
+          - -c
+          - sleep 10 && exit 1

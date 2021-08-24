@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ai.clustar</groupId>
-    <artifactId>kms</artifactId>
+    <artifactId>java-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
-    <name>kms</name>
-    <description>KMS</description>
+    <packaging>jar</packaging>
+    <name>java-project</name>
+    <description>java</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -90,6 +90,11 @@
             <version>5.3.4.RELEASE</version>
         </dependency>
         <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+        <dependency>
             <groupId>io.kubernetes</groupId>
             <artifactId>client-java</artifactId>
             <version>12.0.0</version>
@@ -98,6 +103,16 @@
             <groupId>org.apache.mahout.commons</groupId>
             <artifactId>commons-cli</artifactId>
             <version>2.0-mahout</version>
+        </dependency>
+        <dependency>
+            <groupId>com.esotericsoftware.yamlbeans</groupId>
+            <artifactId>yamlbeans</artifactId>
+            <version>1.12</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.12.0</version>
         </dependency>
         <dependency>
             <groupId>ch.ethz.ganymed</groupId>
@@ -109,6 +124,16 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ai.clustar.neux</groupId>
+            <artifactId>client</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.influxdb</groupId>
+            <artifactId>influxdb-client-java</artifactId>
+            <version>2.1.0</version>
         </dependency>
     </dependencies>
 
